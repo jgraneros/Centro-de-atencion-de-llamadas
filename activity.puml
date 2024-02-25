@@ -1,0 +1,46 @@
+@startuml
+|Persona con sintomas|
+start
+    :Realizar llamado;
+|Operador|
+    :Atender llamado;
+    :Solicitar datos personales;
+    :Registrar datos personales;
+    :Iniciar interrogatorio de sintomas;
+    repeat
+        :Preguntar por [Sintoma];
+        if (¿Posee el sintoma?) then (SI)
+            :Seleccionar [Sintoma];
+        endif
+    repeat while  (¿Mas sintomas?)
+    :Confirmar datos ingresados;
+    :Determinar nivel de gravedad;
+    if (NIVEL 1) then (SI)
+        :Verificar disponibilidad \nde recursos; 
+        if (¿Hay recursos disponibles?) then (SI)
+            :Informar fecha, hora y \ncontacto del turno;
+        else (NO)
+            :Informar a la persona \ncon sintomas de la situación;
+        endif
+    else (NO)
+        if (NIVEL 2) then (SI)
+            :Verificar disponibilidad \nde recursos; 
+            if (¿Hay recursos disponibles?) then (SI)
+                :Informar nombre del medico y \nnumero de contacto para su derivacion;
+            else (NO)
+                :Informar a la persona con \nsintomas de la situación;
+            endif
+        else 
+            if (NIVEL 3) then (SI)
+                :Verificar disponibilidad \nde recursos; 
+                if (¿Hay recursos disponibles?) then (SI)
+                    :Informar a la persona con sintomas que será \ntrasladada a un centro de salud;
+                else (NO)
+                    :Informar a la persona \ncon sintomas de la situación;
+                endif
+            endif
+        endif
+    endif
+    
+stop
+@enduml
