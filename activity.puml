@@ -4,8 +4,11 @@ start
     :Realizar llamado;
 |Operador|
     :Atender llamado;
+    :Iniciar un nuevo registro del llamado
     :Solicitar datos personales;
-    :Registrar datos personales;
+    :Ingresar nombre y apellido;
+    :Ingresar domicilio y telefono;
+    :Confirmar el ingreso de datos personales
     :Iniciar interrogatorio de sintomas;
     repeat
         :Preguntar por [Sintoma];

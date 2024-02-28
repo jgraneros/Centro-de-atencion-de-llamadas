@@ -1,0 +1,16 @@
+@startuml
+
+actor Operador
+
+Operador -> ":Sistema": iniciarNuevoRegistroDelLlamado()
+Operador -> ":Sistema": ingresarNombreYApellido(nombre, apellido)
+Operador -> ":Sistema": ingresarDomicilioYTelefono(domicilio, telefono)
+Operador -> ":Sistema": confirmarDatosPersonales()
+":Sistema" --> Operador: presentar listado de selección de síntomas
+loop mas sintomas
+    Operador -> ":Sistema": seleccionarSintomaDeLaLista(sintoma)
+    ":Sistema" --> Operador:lista actualizada
+end
+Operador -> ":Sistema": confirmarDatosIngresados()
+":Sistema" --> Operador: nivel de gravedad, recurso asignado
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+left to right direction
+actor Administrador as admin
+actor Operador as op
+actor Usuario as user
+
+user <|-- admin
+user <|-- op
+
+package CentroDeAtencion {
+    usecase "RegistrarLlamada" as UC1
+    usecase "ListarLlamadas" as UC2
+    usecase "GestionarSintomas" as UC3
+    usecase "GestionarRecursos" as UC4
+    usecase "GestionarNiveles" as UC5
+}
+
+user -- UC1
+user -- UC2
+admin -- UC3
+admin -- UC4
+admin -- UC5
+
+@enduml
