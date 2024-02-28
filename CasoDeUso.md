@@ -15,7 +15,9 @@
 6. El sistema presenta la lista de selección de síntomas.
 7. El Operador selecciona un síntoma de la lista.
 8. El sistema presenta la lista actualizada con el síntoma seleccionado.
-_Los pasos 7 - 8 se repiten hasta que se indique_
+
+_Los pasos 7 - 8 se repiten hasta que se indique_.
+
 9. El Operador confirma los datos ingresados.
 10. El sistema presenta el nivel de gravedad y el recurso asignado. 
 
