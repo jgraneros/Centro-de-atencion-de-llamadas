@@ -56,4 +56,23 @@ _Los pasos 12 - 13 se repiten hasta que se indique_.
 
     1. El Operador ingresa la sugerencia del nuevo sintoma para su posterior aprobación y alta por parte del Administrador.
 
+13a. El sistema determina que el nivel de gravedad es de NIVEL 1.
 
+    1. EL sistema verifica la disponibilidad de turnos para el dia posterior a la llamada.
+        1a. No hay turnos disponibles.
+            1. El sistema presenta un mensaje indicando la situación.
+    2. El sistema asigna el turno disponible al llamado.
+
+13b. El sistema determina que el nivel de gravedad es de NIVEL 2.
+
+    1. EL sistema verifica la disponibilidad de medicos para  la persona con sintomas.
+        1a. No hay medicos disponibles.
+            1. El sistema presenta un mensaje indicando la situación.
+    2. El sistema asigna el medico disponible al llamado. 
+
+13c. El sistema determina que el nivel de gravedad es de NIVEL 3.
+
+    1. EL sistema verifica la disponibilidad de ambulancias para  la persona con sintomas.
+        1a. No hay ambulancias disponibles.
+            1. El sistema presenta un mensaje indicando la situación.
+    2. El sistema asigna la ambulancia disponible al llamado. 
