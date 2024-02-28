@@ -29,18 +29,31 @@ _Los pasos 12 - 13 se repiten hasta que se indique_.
 ### Extensiones
 
 6a. El nombre ingresado no es válido.
-    1. El sistema señala el error rechazando la entrada.
-6b. El apellido ingresado no es válido.
-    1. El sistema señala el error rechazando la entrada.
-6c. Ambos, nombre y apellido ingresados no son válidos.
-    1. El sistema señala el error rechazando la entrada.
-8a. El domicilio ingresado no es válido.
-    1. El sistema señala el error rechazando la entrada.
-8b. El telefono ingresado no es válido.
-    1. El sistema señala el error rechazando la entrada.
-8c. Ambos datos,domicilio y telefono, ingresados no son válidos.
-    1. El sistema señala el error rechazando la entrada.
-12a. El síntoma que el Operador necesita seleccionar no se encuentra en la lista.
-    1. El Operador ingresa la sugerencia del nuevo sintoma para su posterior aprobación y alta por parte del Administrador.
     
+    1. El sistema señala el error rechazando la entrada.
+
+6b. El apellido ingresado no es válido.
+    
+    1. El sistema señala el error rechazando la entrada.
+
+6c. Ambos, nombre y apellido ingresados no son válidos.
+    
+    1. El sistema señala el error rechazando la entrada.
+
+8a. El domicilio ingresado no es válido.
+
+    1. El sistema señala el error rechazando la entrada.
+
+8b. El telefono ingresado no es válido.
+
+    1. El sistema señala el error rechazando la entrada.
+
+8c. Ambos datos,domicilio y telefono, ingresados no son válidos.
+
+    1. El sistema señala el error rechazando la entrada.
+
+12a. El síntoma que el Operador necesita seleccionar no se encuentra en la lista.
+
+    1. El Operador ingresa la sugerencia del nuevo sintoma para su posterior aprobación y alta por parte del Administrador.
+
 
