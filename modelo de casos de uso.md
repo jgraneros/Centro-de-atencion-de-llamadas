@@ -1,3 +1,7 @@
+## Diagrama de casos de uso
+
+![diagrama de casos de uso](out\use_case\use_case.png)
+
 
 ## Caso de uso: RegistrarLlamada
 
