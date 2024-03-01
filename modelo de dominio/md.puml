@@ -1,0 +1,39 @@
+@startuml
+
+    DNI -- DatosPersonales
+    Domicilio -- DatosPersonales
+    NumeroTelefonico -- DatosPersonales
+    DatosPersonales -- PersonaConSintomas
+    NumeroTelefonico -- CentroDeAtencion
+
+    RegistroDeLlamados -- CentroDeAtencion
+    RegistroDeRecursos -- CentroDeAtencion
+    RegistroDePoliticas -- CentroDeAtencion
+    Sintoma -- PersonaConSintomas
+    ListadoDeSintomas -- CentroDeAtencion
+    Sintoma -- ListadoDeSintomas
+    Llamado -- RegistroDeLlamados
+    NivelDeRecurso -- Recurso
+    Recurso -- RegistroDeRecursos
+    Ambulancia -- Recurso
+    Medico -- Recurso
+    Turno -- Recurso
+    Recurso - Llamado
+    NivelDeGravedad -- Llamado
+    Operador -- CentroDeAtencion
+    Operador -- RegistroDeLlamados
+    Operador -- ListadoDeSintomas
+    Operador -- RegistroDeRecursos
+    PersonaConSintomas -- Operador
+    Operador -- PersonaConSintomas
+    Operador -- Llamado
+    PersonaConSintomas -- Llamado
+    PoliticaDeModificacionRelacionNivelRecurso - RegistroDePoliticas
+    PoliticaDeAsignacionDeTurnos -- RegistroDePoliticas
+    PoliticaDeAsignacionDeRecursos -- RegistroDePoliticas
+    PoliticaDeControlDeComunicacion -- RegistroDePoliticas
+    PoliticaDeSeleccionDeSintomas -- RegistroDePoliticas
+    PoliticaDeRegistroDeLlamada -- RegistroDePoliticas
+    PoliticaDeDisponibilidadDeRecursos -- RegistroDePoliticas
+
+@enduml
