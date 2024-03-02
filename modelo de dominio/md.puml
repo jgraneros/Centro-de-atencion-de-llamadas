@@ -1,39 +1,28 @@
 @startuml
 
-    DNI -- DatosPersonales
-    Domicilio -- DatosPersonales
-    NumeroTelefonico -- DatosPersonales
-    DatosPersonales -- PersonaConSintomas
-    NumeroTelefonico -- CentroDeAtencion
 
-    RegistroDeLlamados -- CentroDeAtencion
-    RegistroDeRecursos -- CentroDeAtencion
-    RegistroDePoliticas -- CentroDeAtencion
-    Sintoma -- PersonaConSintomas
-    ListadoDeSintomas -- CentroDeAtencion
-    Sintoma -- ListadoDeSintomas
-    Llamado -- RegistroDeLlamados
-    NivelDeRecurso -- Recurso
-    Recurso -- RegistroDeRecursos
-    Ambulancia -- Recurso
-    Medico -- Recurso
-    Turno -- Recurso
-    Recurso - Llamado
-    NivelDeGravedad -- Llamado
-    Operador -- CentroDeAtencion
-    Operador -- RegistroDeLlamados
-    Operador -- ListadoDeSintomas
-    Operador -- RegistroDeRecursos
-    PersonaConSintomas -- Operador
-    Operador -- PersonaConSintomas
-    Operador -- Llamado
-    PersonaConSintomas -- Llamado
-    PoliticaDeModificacionRelacionNivelRecurso - RegistroDePoliticas
-    PoliticaDeAsignacionDeTurnos -- RegistroDePoliticas
-    PoliticaDeAsignacionDeRecursos -- RegistroDePoliticas
-    PoliticaDeControlDeComunicacion -- RegistroDePoliticas
-    PoliticaDeSeleccionDeSintomas -- RegistroDePoliticas
-    PoliticaDeRegistroDeLlamada -- RegistroDePoliticas
-    PoliticaDeDisponibilidadDeRecursos -- RegistroDePoliticas
+    Llamado -- RegistroDeLlamados: se registra en >
+    Operador -- Llamado: atiende >
+    PersonaConSintomas -- Llamado: realiza >
+    Operador -- RegistroDeLlamados: registra el llamado en >
+   
 
+    PersonaConSintomas -- Sintoma: descripta por >
+    Sintoma -- NivelDeGravedad: definen el >
+
+    Recurso -- PersonaConSintomas: se le asigna a >
+    PersonaConSintomas -- DatosPersonales: tiene >
+    DNI -- DatosPersonales: forma parte de >
+    Domicilio -- DatosPersonales: forma parte de >
+    NumeroTelefonico -- DatosPersonales: forma parte de >
+
+    Sintoma -- ListadoDeSintomas: contenidos en >
+    ListadoDeSintomas -- Operador
+
+
+
+
+
+    
+    
 @enduml
