@@ -1,0 +1,34 @@
+@startuml modelo de dominio
+
+class PersonaConSintomas{}
+class CentroDeAtencion{}
+class LlamadoTelefonico{}
+class Operador{}
+class RegistroDeLlamado{}
+class DatosPersonales{}
+class ListaDeSeleccionDeSintomas{}
+class Sintoma{}
+class NivelDeGravedad{}
+class Recurso{}
+class AsignacionDeRecurso{}
+
+'asociaciones'
+
+DatosPersonales -- PersonaConSintomas: pertenecen a >
+Sintoma -- PersonaConSintomas: pertenecen a >
+Sintoma -- ListaDeSeleccionDeSintomas: contenido en >
+RegistroDeLlamado -- CentroDeAtencion: contenido en >
+Recurso -- CentroDeAtencion: pertenece al >
+LlamadoTelefonico -- RegistroDeLlamado: se registra en >
+Recurso -- PersonaConSintomas: se asigna a >
+Operador -- CentroDeAtencion: trabaja en >
+Operador -- RegistroDeLlamado: gestiona >
+Operador -- ListaDeSeleccionDeSintomas: utiliza >
+PersonaConSintomas -- CentroDeAtencion: se comunica con >
+PersonaConSintomas -- LlamadoTelefonico: realiza >
+Operador -- LlamadoTelefonico: atiende >
+AsignacionDeRecurso -- Recurso: registra >
+AsignacionDeRecurso -- PersonaConSintomas: registra a >
+NivelDeGravedad -- Sintoma
+
+@enduml

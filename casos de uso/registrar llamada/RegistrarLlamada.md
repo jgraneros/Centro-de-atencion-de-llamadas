@@ -4,12 +4,12 @@
 ### Precondiciones: El Operador se identifica y autentica
 ### Garantías de éxito: Se registra el llamado, se actualiza la disponibilidad de recursos
 
-### Escenario principal de éxito
+### Flujo básico
 
 1. El siguiente caso de uso comienza cuando una `Persona con síntomas` se comunica con el `centro de atención` mediante un `llamado` telefónico.
 2. El `Operador` atiende el `llamado`.
 3. El `Operador` inicia una nueva entrada en el `registro del llamado`
-4. El `Operador` solicita a la persona con sintomas sus `datos personales` [_nombre, apellido, DNI, domicilio y telefono_].
+4. ~~El `Operador` solicita a la persona con sintomas sus `datos personales` [_nombre, apellido, DNI, domicilio y telefono_].~~
 5. El sistema presenta el ingreso del _nombre y apellido_ de la `persona con sintomas`.
 6. El `Operador` ingresa el _nombre y apellido_ de la `persona con síntomas`.
 7. El sistema presenta el ingreso del _domicilio y teléfono_ de la `persona con síntomas`
@@ -23,7 +23,7 @@
 _Los pasos 12 - 13 se repiten hasta que se indique_.
 
 14. El `Operador` confirma los datos ingresados.
-15. El sistema presenta el `nivel de gravedad` y el `recurso` asignado. 
+15. El sistema presenta el `nivel de gravedad` y asigna el `recurso` correspondiente a la `persona con sintomas`. 
 
 ### Extensiones
 
