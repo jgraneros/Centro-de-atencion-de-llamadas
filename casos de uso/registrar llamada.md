@@ -1,8 +1,3 @@
-## Diagrama de casos de uso
-
-![diagrama de casos de uso](out\use_case\use_case.png)
-
-
 ## Caso de uso: RegistrarLlamada
 
 ### Actor principal: Operador
@@ -11,24 +6,24 @@
 
 ### Escenario principal de éxito
 
-1. El siguiente caso de uso comienza cuando una Persona con síntomas se comunica con el centro de atención mediante un llamado telefónico.
-2. El Operador atiende el llamado.
-3. El Operador inicia un nuevo registro del llamado
-4. El Operador solicita a la persona con sintomas sus datos personales [nombre, apellido, DNI, domicilio y telefono].
-5. El sistema presenta el ingreso del nombre y apellido de la persona con sintomas.
-6. El Operador ingresa el nombre y apellido de la persona con síntomas.
-7. El sistema presenta el ingreso del domicilio y teléfono de la persona con síntomas
-8. El Operador ingresa el domicilio y teléfono de la persona con síntomas.
-9. El sistema habilita la confirmación de los datos personales ingresados.
-10. El Operador confirma el ingreso de los datos personales.
-11. El sistema presenta la lista de selección de síntomas.
-12. El Operador selecciona un síntoma de la lista.
+1. El siguiente caso de uso comienza cuando una `Persona con síntomas` se comunica con el `centro de atención` mediante un `llamado` telefónico.
+2. El `Operador` atiende el `llamado`.
+3. El `Operador` inicia una nueva entrada en el `registro del llamado`
+4. El `Operador` solicita a la persona con sintomas sus `datos personales` [_nombre, apellido, DNI, domicilio y telefono_].
+5. El sistema presenta el ingreso del _nombre y apellido_ de la `persona con sintomas`.
+6. El `Operador` ingresa el _nombre y apellido_ de la `persona con síntomas`.
+7. El sistema presenta el ingreso del _domicilio y teléfono_ de la `persona con síntomas`
+8.  El `Operador` ingresa el _domicilio y teléfono_ de la `persona con síntomas`.
+9.  El sistema habilita la confirmación de los `datos personales` ingresados.
+10. El `Operador` confirma el ingreso de los `datos personales`.
+11. El sistema presenta la `lista de selección de síntomas`.
+12. El `Operador` selecciona un `síntoma` de la lista.
 13. El sistema presenta la lista actualizada con el síntoma seleccionado.
 
 _Los pasos 12 - 13 se repiten hasta que se indique_.
 
-14. El Operador confirma los datos ingresados.
-15. El sistema presenta el nivel de gravedad y el recurso asignado. 
+14. El `Operador` confirma los datos ingresados.
+15. El sistema presenta el `nivel de gravedad` y el `recurso` asignado. 
 
 ### Extensiones
 
