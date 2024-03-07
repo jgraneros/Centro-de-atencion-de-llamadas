@@ -11,7 +11,7 @@
 3. LlamadoTelefonico
 4. Operador
 5. RegistroDeLlamado
-6. DatosPersonales
+6. ~~DatosPersonales~~
 7. ListaDeSeleccionDeSintomas
 8. Sintoma
 9. NivelDeGravedad
@@ -22,7 +22,7 @@
 
 1. A es una parte lógica o física de B
 
-        DatosPersonales -- PersonaConSintomas
+        ~~DatosPersonales -- PersonaConSintomas~~
         Sintoma -- PersonaConSintomas
 
 2. A está contenido lógica o físicamente en B

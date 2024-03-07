@@ -1,20 +1,41 @@
 @startuml modelo de dominio
 
-class PersonaConSintomas{}
-class CentroDeAtencion{}
-class LlamadoTelefonico{}
-class Operador{}
+class PersonaConSintomas{
+    nombre
+    apellido
+    dni
+    numeroTelefonico
+}
+class CentroDeAtencion{
+    numeroTelefonico
+}
+class LlamadoTelefonico{
+    fecha
+    hora
+}
+class Operador{
+    nombre
+    apellido
+}
 class RegistroDeLlamado{}
-class DatosPersonales{}
 class ListaDeSeleccionDeSintomas{}
-class Sintoma{}
-class NivelDeGravedad{}
-class Recurso{}
-class AsignacionDeRecurso{}
+class Sintoma{
+    nombre
+}
+class NivelDeGravedad{
+    nombreNivel
+}
+class Recurso{
+    recursoID
+    descripcion
+}
+class AsignacionDeRecurso{
+    fechaAsignacion
+    estado
+}
 
 'asociaciones'
 
-DatosPersonales -- PersonaConSintomas: pertenecen a >
 Sintoma -- PersonaConSintomas: pertenecen a >
 Sintoma -- ListaDeSeleccionDeSintomas: contenido en >
 RegistroDeLlamado -- CentroDeAtencion: contenido en >
