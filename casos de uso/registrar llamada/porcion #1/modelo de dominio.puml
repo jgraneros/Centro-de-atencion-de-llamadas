@@ -3,35 +3,33 @@
 class PersonaConSintomas{
     nombre
     apellido
-    dni
-    numeroTelefonico
+    numeroDni
 }
-class CentroDeAtencion{
-    numeroTelefonico
-}
+
+class CentroDeAtencion{}
 class LlamadoTelefonico{
     fecha
     hora
 }
-class Operador{
-    nombre
-    apellido
-}
+class Operador{}
 class RegistroDeLlamado{}
 class ListaDeSeleccionDeSintomas{}
 class Sintoma{
     nombre
 }
 class NivelDeGravedad{
-    nombreNivel
+    nombre
 }
-class Recurso{
-    recursoID
-    descripcion
+class Recurso{}
+
+class Telefono{
+    codigoArea
+    numero
 }
-class AsignacionDeRecurso{
-    fechaAsignacion
-    estado
+
+class Domicilio{
+    nombreCalle
+    numero
 }
 
 'asociaciones'
@@ -39,17 +37,24 @@ class AsignacionDeRecurso{
 Sintoma -- PersonaConSintomas: pertenecen a >
 Sintoma -- ListaDeSeleccionDeSintomas: contenido en >
 RegistroDeLlamado -- CentroDeAtencion: contenido en >
-Recurso -- CentroDeAtencion: pertenece al >
+
 LlamadoTelefonico -- RegistroDeLlamado: se registra en >
-Recurso -- PersonaConSintomas: se asigna a >
+
 Operador -- CentroDeAtencion: trabaja en >
 Operador -- RegistroDeLlamado: gestiona >
 Operador -- ListaDeSeleccionDeSintomas: utiliza >
-PersonaConSintomas -- CentroDeAtencion: se comunica con >
+
 PersonaConSintomas -- LlamadoTelefonico: realiza >
 Operador -- LlamadoTelefonico: atiende >
-AsignacionDeRecurso -- Recurso: registra >
-AsignacionDeRecurso -- PersonaConSintomas: registra a >
-NivelDeGravedad -- Sintoma
+NivelDeGravedad -- Sintoma: definido por >
+
+
+Recurso -- CentroDeAtencion: pertenece al >
+PersonaConSintomas -- Recurso: se le asigna >
+PersonaConSintomas -- CentroDeAtencion: se comunica con >
+
+Domicilio -- PersonaConSintomas: vivie en <
+Telefono -- PersonaConSintomas: se la contacta mediante <
+Telefono -- CentroDeAtencion: contacto del >
 
 @enduml

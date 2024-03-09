@@ -16,7 +16,6 @@
 8. Sintoma
 9. NivelDeGravedad
 10. Recurso
-11. AsignacionDeRecurso
 
 ## Asociaciones de alta prioridad
 
@@ -36,7 +35,8 @@
         LlamadoTelefonico -- RegistroDeLlamado
         Recurso -- PersonaConSintomas
 
-## Asociaciones comunes
+## Asociaciones necesito-conocer
+
 4. A es una descripción de B
 5. A es una línea de una transacción o informe de B
 6. A se conoce/registra/captura/informa/recoge en B
@@ -64,6 +64,10 @@
 13. A está al lado de B
 14. A es propiedad de B
 15. A es un evento relacionado con B
-        AsignacionDeRecurso -- Recurso
-        AsignacionDeRecurso -- PersonaConSintomas
 
+## Atributos complejos
+
+1. Telefono
+2. Domicilio
+3. DNI
+4. TipoRecurso
