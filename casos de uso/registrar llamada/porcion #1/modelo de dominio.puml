@@ -34,27 +34,26 @@ class Domicilio{
 
 'asociaciones'
 
-Sintoma -- PersonaConSintomas: pertenecen a >
-Sintoma -- ListaDeSeleccionDeSintomas: contenido en >
-RegistroDeLlamado -- CentroDeAtencion: contenido en >
+Sintoma "*" -- "1" PersonaConSintomas: pertenecen a >
+Sintoma "*" -- "1" ListaDeSeleccionDeSintomas: contenido en >
+RegistroDeLlamado "1" -- "1" CentroDeAtencion: contenido en >
 
-LlamadoTelefonico -- RegistroDeLlamado: se registra en >
+LlamadoTelefonico "*" -- "1" RegistroDeLlamado: se registra en >
 
-Operador -- CentroDeAtencion: trabaja en >
-Operador -- RegistroDeLlamado: gestiona >
-Operador -- ListaDeSeleccionDeSintomas: utiliza >
+Operador "1" -- "1" CentroDeAtencion: trabaja en >
+Operador "1" -- "1" RegistroDeLlamado: gestiona >
+Operador "1" -- "1" ListaDeSeleccionDeSintomas: utiliza >
 
-PersonaConSintomas -- LlamadoTelefonico: realiza >
-Operador -- LlamadoTelefonico: atiende >
-NivelDeGravedad -- Sintoma: definido por >
+PersonaConSintomas "1" -- "1" LlamadoTelefonico: realiza >
+Operador "1" -- "1" LlamadoTelefonico: atiende >
+NivelDeGravedad "1" -- "*" Sintoma: definido por >
 
+Recurso "1..3" -- "1" CentroDeAtencion: pertenece al >
+PersonaConSintomas "1" -- "1" Recurso: se le asigna >
+PersonaConSintomas "1" -- "1" CentroDeAtencion: se comunica con >
 
-Recurso -- CentroDeAtencion: pertenece al >
-PersonaConSintomas -- Recurso: se le asigna >
-PersonaConSintomas -- CentroDeAtencion: se comunica con >
-
-Domicilio -- PersonaConSintomas: vivie en <
-Telefono -- PersonaConSintomas: se la contacta mediante <
-Telefono -- CentroDeAtencion: contacto del >
+Domicilio "1" -- "1" PersonaConSintomas: vivie en <
+Telefono "*" -- "1" PersonaConSintomas: se la contacta mediante <
+Telefono "1" -- "1" CentroDeAtencion: contacto del >
 
 @enduml
